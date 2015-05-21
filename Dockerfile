@@ -50,8 +50,8 @@ RUN cd /usr/local/src \
  && python3 setup.py install
 
 # Set the data directory.
-ENV LEDGER_FILE /data/mitchell.dat
-WORKDIR /data
+ENV LEDGER_FILE /ledger/ledger.dat
+WORKDIR /ledger
 
 # Define default command.
 CMD ["bash"]
