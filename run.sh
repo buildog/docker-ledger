@@ -1,8 +1,9 @@
 #/usr/bin/env bash
 
 if [ -z ${LEDGER_ROOT+x} ]; then
-  LEDGER_ROOT=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)/ledger
+  echo "Set LEDGER_ROOT before running."
+  exit 1
 fi
 
-NAME=rymitch/docker-base
+NAME=rymitch/docker-ledger
 docker run -it --rm -v $LEDGER_ROOT:/ledger $NAME $*
